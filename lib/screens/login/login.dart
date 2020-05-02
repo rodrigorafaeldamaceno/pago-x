@@ -12,15 +12,15 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 10),
+          margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           height: size.height,
           width: double.infinity,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Container(
-                height: size.width * 0.3,
-                width: size.width * 0.3,
+                height: size.width * 0.5,
+                width: size.width * 0.5,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     fit: BoxFit.fill,
@@ -28,12 +28,15 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Text(
-                'Faça seu login',
-                style: TextStyle(
-                  fontSize: 25,
-                  color: Colors.green,
-                  fontWeight: FontWeight.bold,
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Faça seu login',
+                  style: TextStyle(
+                    fontSize: 25,
+                    color: Colors.green,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               TextField(
@@ -87,8 +90,11 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(height: 8),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, 'cadastrar_usuario');
+                },
                 child: Align(
                   alignment: Alignment.centerRight,
                   child: Text(

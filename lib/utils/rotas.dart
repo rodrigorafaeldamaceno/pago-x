@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pagox/screens/home/home_screen.dart';
+import 'package:pagox/screens/login/cadastrar_conta.dart';
 import 'package:pagox/screens/login/login.dart';
+import 'package:pagox/screens/tutorial/sliding_tutorial.dart';
 
 class Rotas {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -11,6 +13,14 @@ class Rotas {
         break;
       case 'home':
         return MaterialPageRoute(builder: (_) => HomeScreen());
+        break;
+      case 'cadastrar_usuario':
+        return MaterialPageRoute(builder: (_) => CadastrarContaScreen());
+        break;
+      case 'tutorial':
+        return MaterialPageRoute(
+          builder: (_) => TutorialPage(),
+        );
         break;
       default:
         _errorRoute();

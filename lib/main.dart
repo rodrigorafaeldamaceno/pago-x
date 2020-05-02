@@ -19,8 +19,9 @@ class MyApp extends StatelessWidget {
       title: 'Pago X',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
         primarySwatch: Colors.green,
-        primaryColor: Colors.green
+        primaryColor: Colors.green,
       ),
       home: HomeScreen(),
       initialRoute: defaultHome,
