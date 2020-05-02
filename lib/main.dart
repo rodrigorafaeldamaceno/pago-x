@@ -3,7 +3,7 @@ import 'package:pagox/screens/home/home_screen.dart';
 import 'package:pagox/utils/rotas.dart';
 
 void main() async {
-  String defaultHome = 'home';
+  String defaultHome = 'login';
 
   runApp(MyApp(defaultHome));
 }
