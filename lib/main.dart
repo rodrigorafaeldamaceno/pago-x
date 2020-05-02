@@ -1,63 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:pagox/screens/home/home_screen.dart';
+import 'package:pagox/utils/rotas.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  String defaultHome = 'home';
+
+  runApp(MyApp(defaultHome));
+}
 
 class MyApp extends StatelessWidget {
+  String defaultHome;
+
+  MyApp(this.defaultHome);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Pago X',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
+        primaryColor: Colors.green
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ),
+      home: HomeScreen(),
+      initialRoute: defaultHome,
+      onGenerateRoute: Rotas.generateRoute,
     );
   }
 }
