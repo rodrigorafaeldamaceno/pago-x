@@ -1,4 +1,4 @@
-# pagox
+# pago-x
 
 A new Flutter application.
 
