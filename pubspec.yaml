@@ -18,6 +18,9 @@ dependencies:
   flutter_svg: ^0.14.0
 
   cupertino_icons: ^0.1.2
+  cloud_firestore: ^0.13.5
+  firebase_auth: ^0.16.0
+  firebase_core: ^0.4.4+3
 
 dev_dependencies:
   mobx_codegen: ^0.4.0+1

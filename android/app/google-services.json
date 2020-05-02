@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "47461773485",
+    "firebase_url": "https://pagox-38468.firebaseio.com",
+    "project_id": "pagox-38468",
+    "storage_bucket": "pagox-38468.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47461773485:android:fb1a70e66d2b6e70805624",
+        "android_client_info": {
+          "package_name": "com.rodrigo.pagox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47461773485-ukb7j1n5n347qsh2ndf7d7hhdu5tljcd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rodrigo.pagox",
+            "certificate_hash": "6c7b02f8df09da9c6c2fc11224e2cf43a860c769"
+          }
+        },
+        {
+          "client_id": "47461773485-4v73uur77rd9ctfmqbg500bbkgfp0ehv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCMGJhHjCS0KZ-HLIWDTxFSj_Rsf-eCb0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47461773485-4v73uur77rd9ctfmqbg500bbkgfp0ehv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
