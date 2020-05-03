@@ -29,7 +29,7 @@ class TutorialTerceiraPagina extends StatelessWidget {
                   heightFactor: 0.35,
                   child: SlidingContainer(
                     child: Image.asset(
-                      "assets/images/tutorial/onboarding_3.png",
+                      "assets/images/tutorial/tutorial_3.png",
                     ),
                     offset: 300,
                   ),

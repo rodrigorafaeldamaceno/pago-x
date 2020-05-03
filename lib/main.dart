@@ -9,9 +9,9 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  String defaultHome;
-
   MyApp(this.defaultHome);
+
+  String defaultHome;
 
   @override
   Widget build(BuildContext context) {

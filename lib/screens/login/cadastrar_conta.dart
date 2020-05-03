@@ -9,8 +9,6 @@ class CadastrarContaScreen extends StatelessWidget {
   TextEditingController _nomeController = TextEditingController();
   AutenticacaoStore controller = AutenticacaoStore();
 
-  Widget termosDeUso() {}
-
   @override
   Widget build(BuildContext context) {
     size = MediaQuery.of(context).size;
@@ -72,7 +70,7 @@ class CadastrarContaScreen extends StatelessWidget {
               SizedBox(height: 10),
               RaisedButton(
                 onPressed: () {
-                  true
+                  false
                       ? Container()
                       : Navigator.pushNamedAndRemoveUntil(
                           context,
