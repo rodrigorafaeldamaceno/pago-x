@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pagox/screens/negociacoes/negociacoes_screen.dart';
 import 'package:pagox/screens/procurar_produto/procurar_produto_screen.dart';
 import 'package:pagox/stores/home/home_store.dart';
 import 'package:pagox/widgets/custom/custom_drawer.dart';
@@ -39,12 +40,7 @@ class HomeScreen extends StatelessWidget {
               style: TextStyle(fontSize: 50),
             ),
           ),
-          Center(
-            child: Text(
-              'Pagina 4',
-              style: TextStyle(fontSize: 50),
-            ),
-          ),
+          NegociacaoScreen(),
           Center(
             child: Text(
               'Pagina 5',

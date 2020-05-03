@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Pago X',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        appBarTheme: AppBarTheme(elevation: 0),
         scaffoldBackgroundColor: Colors.white,
         primarySwatch: Colors.green,
         primaryColor: Colors.green,
