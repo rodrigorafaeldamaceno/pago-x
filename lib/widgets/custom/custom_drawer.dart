@@ -1,18 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:pagox/stores/autenticacao/authServices.dart';
 
 class DrawerMenu extends StatefulWidget {
   DrawerMenu({this.index, this.pageController});
 
   final int index;
   final PageController pageController;
-
   @override
   _DrawerMenuState createState() => _DrawerMenuState();
 }
 
 class _DrawerMenuState extends State<DrawerMenu> {
   double rating = 0;
+  AuthService auth = AuthService();
+  
+  _submitUser(){
+    return auth.logout().then((onValue){
+      print("resposta  == " + onValue.toString() + auth.getUser().toString());
+    });
+  }
 
   Widget buildListTile({IconData icon, String label, Function onTap}) {
     return ListTile(
@@ -147,6 +154,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                 icon: MdiIcons.arrowLeft,
                 label: 'Sair',
                 onTap: () {
+                  _submitUser();
                   Navigator.pushNamedAndRemoveUntil(
                     context,
                     'login',
