@@ -36,7 +36,9 @@ class ProcurarProdutoScreen extends StatelessWidget {
               height: 16,
             ),
             RaisedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, 'detalhes_produto');
+              },
               elevation: 6,
               padding: EdgeInsets.symmetric(
                 horizontal: 140,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pagox/screens/detalhes_produto/detalhes_produto_screen.dart';
 import 'package:pagox/screens/home/home_screen.dart';
 import 'package:pagox/screens/login/cadastrar_conta.dart';
 import 'package:pagox/screens/login/login.dart';
@@ -22,8 +23,11 @@ class Rotas {
           builder: (_) => TutorialPage(),
         );
         break;
+      case 'detalhes_produto':
+        return MaterialPageRoute(builder: (_) => DetelhesProdutoScreen());
+        break;
       default:
-        _errorRoute();
+        return _errorRoute();
     }
   }
 
