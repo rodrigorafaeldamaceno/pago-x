@@ -9,9 +9,9 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  String defaultHome;
-
   MyApp(this.defaultHome);
+
+  String defaultHome;
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +19,10 @@ class MyApp extends StatelessWidget {
       title: 'Pago X',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        appBarTheme: AppBarTheme(elevation: 0),
+        scaffoldBackgroundColor: Colors.white,
         primarySwatch: Colors.green,
-        primaryColor: Colors.green
+        primaryColor: Colors.green,
       ),
       home: HomeScreen(),
       initialRoute: defaultHome,
