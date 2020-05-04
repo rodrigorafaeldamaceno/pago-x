@@ -1,10 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:pagox/models/usuario.dart';
+import 'package:pagox/stores/autenticacao/authServices.dart';
 
 class LoginScreen extends StatelessWidget {
   Size size;
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passController = TextEditingController();
+  AuthService auth = AuthService();
+  
+  _submitUser(){
+    Usuario usuario = Usuario();
+    usuario.email = _emailController.text;
+    usuario.senha = _passController.text;
 
+    
+    return auth.loginUser(usuario.toMap()).then((onValue){
+      print("resposta  == " + onValue.toString() + auth.getUser().toString());
+    });
+  }
+  
   @override
   Widget build(BuildContext context) {
     size = MediaQuery.of(context).size;
@@ -58,6 +72,8 @@ class LoginScreen extends StatelessWidget {
               SizedBox(height: 10),
               RaisedButton(
                 onPressed: () {
+
+                  _submitUser();
                   Navigator.pushNamedAndRemoveUntil(
                     context,
                     'home',

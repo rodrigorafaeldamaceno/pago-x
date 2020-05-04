@@ -1,14 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:pagox/models/usuario.dart';
 import 'package:pagox/stores/autenticacao/autenticacao_store.dart';
+import 'package:pagox/stores/autenticacao/authServices.dart';
+import 'package:pagox/utils/validationUtil.dart';
 
 class CadastrarContaScreen extends StatelessWidget {
   Size size;
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passController = TextEditingController();
   TextEditingController _nomeController = TextEditingController();
-  AutenticacaoStore controller = AutenticacaoStore();
 
+  AutenticacaoStore controller = AutenticacaoStore();
+  ValidationUtil _util =ValidationUtil();
+  AuthService auth = AuthService();
+
+  
+  _submitUser(){
+    Usuario usuario = Usuario();
+    usuario.nome = _nomeController.text;
+    usuario.email = _emailController.text;
+    usuario.senha = _passController.text;
+
+    
+    return auth.createUser(usuario.toMap());
+  }
   @override
   Widget build(BuildContext context) {
     size = MediaQuery.of(context).size;
@@ -70,13 +86,13 @@ class CadastrarContaScreen extends StatelessWidget {
               SizedBox(height: 10),
               RaisedButton(
                 onPressed: () {
-                  false
-                      ? Container()
-                      : Navigator.pushNamedAndRemoveUntil(
-                          context,
-                          'tutorial',
-                          ((Route route) => false),
-                        );
+                  _submitUser();
+                  Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    'tutorial',
+                    ((Route route) => false),
+                  );
+                  
                 },
                 color: Colors.green,
                 child: Container(
